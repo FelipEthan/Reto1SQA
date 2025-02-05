@@ -21,7 +21,7 @@ git clone <url_del_repositorio>
 mvn clean install
 
 ## Ejecución de Pruebas:
-mvn clean verify
+mvn clean verify o directamente desde la clase Runner
 
 ## Criterios de Aceptación y Escenarios de Prueba
 1. Listar Usuarios

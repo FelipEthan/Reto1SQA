@@ -1,0 +1,55 @@
+# Pruebas Automatizadas para el Proceso de Selección de Automatizador
+
+## Descripción
+
+Este repositorio contiene las pruebas diseñadas y automatizadas para el proceso de selección de automatizador. Las pruebas están basadas en los criterios de aceptación proporcionados y se enfocan en la automatización de servicios web utilizando la API de [ReqRes](https://reqres.in/).
+
+## Tecnologías Utilizadas
+
+- **Lenguaje:** Java
+- **Framework de Automatización:** Serenity BDD con Cucumber
+- **Manejo de Dependencias:** Maven
+- **Herramientas de Pruebas:** RestAssured para pruebas de servicios web
+- **Gestión de Versiones:** Git
+
+## Configuración del Entorno
+
+1. **Clonar el repositorio:**
+git clone <url_del_repositorio>
+
+## Instalar dependencias:
+mvn clean install
+
+## Ejecución de Pruebas:
+mvn clean verify
+
+## Criterios de Aceptación y Escenarios de Prueba
+1. Listar Usuarios
+
+Dado que accedo al servicio de listar usuarios de ReqRes
+Cuando realizo una solicitud GET al endpoint /api/users?page=2
+Entonces la respuesta debe contener la lista de usuarios en la página 2 y el estado de la respuesta debe ser 200.
+
+2. Crear un Nuevo Usuario
+
+Dado que tengo los datos para crear un nuevo usuario
+Cuando realizo una solicitud POST al endpoint /api/users con los datos del usuario
+Entonces la respuesta debe indicar que el usuario fue creado exitosamente con un estado de 201, y debe devolver el ID del usuario creado.
+
+3. Actualizar un Usuario Existente
+
+Dado que tengo un ID de usuario existente
+Cuando realizo una solicitud PUT al endpoint /api/users/{id} con datos actualizados
+Entonces la respuesta debe indicar que el usuario fue actualizado exitosamente con un estado de 200, y debe devolver los datos actualizados.
+
+4. Eliminar un Usuario Existente
+
+Dado que tengo un ID de usuario existente
+Cuando realizo una solicitud DELETE al endpoint /api/users/{id}
+Entonces la respuesta debe devolver un estado de 204, indicando que el usuario fue eliminado exitosamente.
+
+##Recomendaciones
+
+Verificar que los endpoints de la API de ReqRes estén disponibles antes de ejecutar las pruebas.
+
+Revisar la configuración del entorno para asegurar la correcta ejecución de las pruebas.

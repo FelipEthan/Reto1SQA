@@ -7,9 +7,9 @@ Este repositorio contiene las pruebas diseñadas y automatizadas para el proceso
 ## Tecnologías Utilizadas
 
 - **Lenguaje:** Java
-- **Framework de Automatización:** Serenity BDD con Cucumber
+- **Framework de Automatización:** Cucumber
 - **Manejo de Dependencias:** Maven
-- **Herramientas de Pruebas:** RestAssured para pruebas de servicios web
+- **Herramientas de Pruebas:** RestAssured para pruebas de servicios web, Junit
 - **Gestión de Versiones:** Git
 
 ## Configuración del Entorno
